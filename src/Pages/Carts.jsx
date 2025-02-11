@@ -64,7 +64,7 @@ const Carts = () => {
 
     <h1 textAlign="center" >Your Cart is Ready </h1>
    <h4> Your Total Bill is :  <FaIndianRupeeSign /> {totalAmount}</h4> 
-   <Button variant="light" onClick={()=>{navigate("/checkout")}} >Checkout</Button>
+   <Button variant="outline-dark" onClick={()=>{navigate("/checkout")}} >Checkout</Button>
 
     </div>
   

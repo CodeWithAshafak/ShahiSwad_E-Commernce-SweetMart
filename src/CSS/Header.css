@@ -1,27 +1,27 @@
 
-/* .navbar {
+ .navbar {
   background-color: rgba(0, 0, 0, 0.4) !important; 
   backdrop-filter: blur(10px); 
   transition: background-color 0.3s ease-in-out;
   padding: 10px 0;
   
-} */
+} 
 
 /* Brand styling */
 
-/* .navbar-brand {
+ .navbar-brand {
   font-size: 1.8rem;
   font-weight: bold;
   color: white !important;
 }
 
 .navbar-brand span {
-  color: #FFD700; /* Gold color for 'Swad' */
-} */
+  color: #FFD700; 
+} 
 
 /* Style navigation links */
 
-/* .navbar-nav .nav-link {
+ .navbar-nav .nav-link {
   color: white !important;
   font-size: 1.1rem;
   margin-right: 15px;
@@ -29,13 +29,13 @@
 }
 
 .navbar-nav .nav-link:hover {
-  color: #FFD700 !important; /* Gold hover effect */
+  color: #FFD700 !important; 
   transform: scale(1.05);
-} */
+} 
 
 /* Dropdown menu styling */
 
-/* .navbar-nav .dropdown-menu {
+ .navbar-nav .dropdown-menu {
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
 }
@@ -46,13 +46,13 @@
 
 .navbar-nav .dropdown-item:hover {
   background-color: rgba(255, 215, 0, 0.2);
-} */
+} 
 
 /* Right-side icons */
 
 
-/* .nav-icons {
-  border: 1px solid black;
+.nav-icons {
+  /* border: 1px solid black; */
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -70,4 +70,4 @@
 .nav-icons .nav-link:hover {
   transform: scale(1.1);
   color: #FFD700 !important;
-} */
+} 

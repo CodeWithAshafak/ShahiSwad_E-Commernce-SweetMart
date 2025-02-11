@@ -6,7 +6,7 @@ import Card from "react-bootstrap/Card";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addtoCart } from "../AddToCardSlice";
-import { ImGoogle } from "react-icons/im";
+import border from "../Images/border.png"
 
 
 const Home = () => {
@@ -37,7 +37,7 @@ const Home = () => {
             <Card.Text>
              price : {key.price}
             </Card.Text>
-            <Button variant="primary"
+            <Button variant="outline-dark"
              onClick={()=>{dispatch(addtoCart({id:key.id , name:key.name,desc:key.description 
                , price:key.price ,qnty:1 ,
              image:key.img}))}}>Add to cart</Button>
@@ -50,7 +50,15 @@ const Home = () => {
   return (
     <>
       <Container className="mycart" fluid>
-        <h1>Trending products</h1>
+
+        <div className="heading">
+
+
+        <h1>SEASON SPECIAL SWEETS</h1>
+        <img src={border} alt="border" />
+        </div>
+
+
 
         <div id="cartwarapper">
           {result}

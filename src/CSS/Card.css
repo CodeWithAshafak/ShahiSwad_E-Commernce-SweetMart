@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(135deg, #c5c9cf, #cfd0d2); /* Deep Blue & Purple */
+  background: white;
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
@@ -25,14 +25,14 @@
 .headingCointainer h1 {
   font-size: 2.2rem;
   font-weight: bold;
-  color: #ffffff;
+  color: rgb(46, 41, 41);
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .headingCointainer h4 {
   font-size: 1.6rem;
   font-weight: 600;
-  color: #f1f1f1;
+  color: rgb(46, 41, 41);
   margin-top: 12px;
 }
 

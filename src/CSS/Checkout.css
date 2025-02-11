@@ -1,0 +1,16 @@
+.headingCheck{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.headingCheck h1{
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.headingCheck img{
+  height: 17px;
+  width:200px !important;
+}
