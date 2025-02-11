@@ -1,0 +1,103 @@
+{
+  
+   "product":[
+     { 
+       "id":1,
+       "name":"Kesar-Ice-Halwa",
+       "img":"/src/images/cart1.jpg",
+       
+       "description":"lorem",
+       "price":"750"
+     },
+     {
+       "id":2,
+       "name":"kesar-bundi-ladu",
+       "img":"/src/images/cart2.jpg",
+       "description":"lorem",
+      
+       "price":"900"
+     },
+     {
+       "id":3,
+       "name":"MOTICHUR LADU",
+       "img":"/src/images/cart3.jpg",
+       "description":"lorem",
+       
+       "price":"600"
+     },
+     {
+       "id":4,
+       "name":"shon-papdi",
+       "img":"/src/images/cart4.jpg",
+       "description":"lorem",
+      
+       "price":"450"
+     },
+     {
+       "id":5,
+       "name":"topra-pak",
+       "img":"/src/images/cart5.jpg",
+       "description":"lorem",
+     
+       "price":"400"
+     },
+     {
+       "id":6,
+       "name":"Pista-Ghari",
+       "img":"/src/images/cart6.jpg",
+       "description":"lorem",
+     
+       "price":"600"
+     },
+     {
+       "id":7,
+       "name":"MAGAS",
+       "img":"/src/images/cart7.jpg",
+       "description":"lorem",
+      
+       "price":"786"
+     },
+     {
+ 
+       "id":8,
+       "name":"ROSE ALPINE",
+       "img":"/src/images/cart8.jpg",
+       "description":"lorem",
+      
+       "price":"640"
+     },
+     {
+ 
+       "id":9,
+       "name":"Sandwich-Katri",
+       "img":"/src/images/cart9.jpg",
+       "description":"lorem",
+      
+       "price":"215"
+     },
+     {
+       "id":10,
+       "name":"Churma-Ladu",
+       "img":"/src/images/cart10.jpg",
+       "description":"lorem",
+       
+       "price":"800"
+     },
+     {
+       "id":11,
+       "name":"royal-treat-matho",
+       "img":"/src/images/cart11.jpg",
+      
+       "quantity":"200g",
+       "price":"310"
+     },
+     {
+       "id":12,
+       "name":"KESAR MALAI PEDA",
+       "img":"/src/images/cart12.jpg",
+       "description":"lorem",
+     
+       "price":"600"
+     }
+   ]
+ }

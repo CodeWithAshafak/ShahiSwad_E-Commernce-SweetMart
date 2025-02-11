@@ -1,0 +1,21 @@
+body{
+  
+  background-color: antiquewhite;
+  font-family: Bolero-esque;
+  
+}
+
+
+
+#topheader{
+  background-color: grey;
+  height: 50px;
+  width: 100%;
+  text-align: right;
+}
+#navgrp{
+  width: 100%;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+}

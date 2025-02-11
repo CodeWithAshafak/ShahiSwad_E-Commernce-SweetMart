@@ -1,0 +1,16 @@
+.mycart{
+  height: auto;
+  width: 100%;
+  background-color: pink;
+  padding: 20px;
+}
+.mycart h1{
+  text-align: center;
+}
+.mycart #cartwarapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohit Gupta portfolio</title>
+  <!-- <link rel="stylesheet" href="./css/animation-classes.css" /> -->
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+  <script src="./js/animation.js" defer></script>
+  <script src="./js/color-mode.js" defer></script>
+  <script src="./js/project-slideshow.js" defer></script>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/animation.css" />
+  <link rel="stylesheet" href="./css/color-mode.css" />
+</head>
+
+<body>
+
+  <div id="cat"></div>
+  <div id="rat"></div>
+
+  <script>
+
+    // Ripple
+    window.addEventListener("click", ev => {
+      let ripple = document.createElement("div")
+      ripple.classList.add("ripple");
+      ripple.style.top = ev.clientY + "px";
+      ripple.style.left = ev.clientX + "px";
+      document.body.appendChild(ripple);
+      ripple.addEventListener("animationend", () => ripple.remove())
+    });
+
+
+    // cat
+
+      const cat = document.getElementById('cat');
+      const runningGif = './assets/cat/running-run.gif';
+      const staticImage = './assets/cat/catani1.png';
+      const moveSound = new Audio('./assets/cat/cat-aud1.mp3');
+
+      document.addEventListener('click', function (event) {
+        const clickX = event.clientX;
+        const clickY = event.clientY;
+
+        const catRect = cat.getBoundingClientRect();
+        const catX = catRect.left + catRect.width / 2;
+        const catY = catRect.top + catRect.height / 2;
+
+        const directionX = clickX - catX;
+        const directionY = clickY - catY;
+
+        const angle = Math.atan2(directionY, directionX);
+        const angleDegrees = angle * (180 / Math.PI);
+
+        moveSound.play();
+
+        cat.style.transform = `translate(-50%, -50%) rotate(${angleDegrees}deg) scaleX(-1)`;
+        cat.style.backgroundImage = `url(${runningGif})`;
+        moveCat(clickX, clickY, angleDegrees);
+      });
+
+      function moveCat(x, y, angleDegrees) {
+        cat.style.left = (x - 50) + 'px';
+        cat.style.top = (y - 50) + 'px';
+
+        setTimeout(() => {
+          cat.style.backgroundImage = `url(${staticImage})`;
+          cat.style.transform = `translate(-50%, -50%) rotate(${angleDegrees}deg) scaleX(-1)`; 
+        }, 1000);
+      }
+
+
+
+  </script>
+
+
+
+  <div id="hero">
+    <h5>Hello I'm</h5>
+    <h1>Rohit Gupta</h1>
+    <p>Codingkite | Fullstack Developer</p>
+
+
+
+
+
+    <!-- Block, Element, Modifier (BEM) naming convention-->
+    <div id="hero__animation">
+      <div id="hero__animation__img"></div>
+    </div>
+  </div>
+  <nav id="grid">
+    <div id="grid__tl">
+      <div id="grid__tl__btn">About</div>
+      <div id="grid__tl__content">
+        <div class="cards">
+
+          <div class="cards__content">
+            <article>
+              <img src="./assets/icons/th.jpeg" alt="Education icon" class="icon" />
+              <h2>Resume</h2>
+              <a href="" download style="text-decoration: none;">
+                <p class="dwn">Download</p>
+              </a>
+            </article>
+          </div>
+
+          <div class="cards__content">
+            <article>
+              <img src="./assets/icons/experience.png" alt="Experience icon" class="icon" />
+              <h2>Experience</h2>
+              <p>
+                6 Months + <br />
+                Developer <br />
+                Experience
+              </p>
+            </article>
+          
+          </div>
+          <div class="cards__content">
+            <article>
+              <img src="./assets/icons/education.png" alt="Education icon" class="icon" />
+              <h2>Education</h2>
+              <p>B. Sc. Information Technology</p>
+              <p>7.72 CGPA </p>
+            </article>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div id="grid__tr">
+      <div id="grid__tr__btn">Experience</div>
+      <div id="grid__tr__content">
+        <div class="cards experience">
+          <article class="experience__skill">
+
+            <h2>Frontend Development</h2>
+
+
+            <div>
+              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>JavaScript</h2>
+                <p>Intermediate</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>React JS</h2>
+                <p>Intermediate</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>Java</h2>
+                <p>Experienced</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>HTML-CSS</h2>
+                <p>Experienced</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>Figma</h2>
+                <p>Intermediate</p>
+              </div>
+            </div>
+
+
+
+
+
+          </article>
+
+          <article class="experience__skill">
+
+            <h2>Backend Development</h2>
+
+            <div>
+              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>MongoDB</h2>
+                <p>Intermediate</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>MySQL</h2>
+                <p>Intermediate</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>NodeJS</h2>
+                <p>Experienced</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>Express JS</h2>
+                <p>Basic</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="./assets/icons/checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>GitHub</h2>
+                <p>Basic</p>
+              </div>
+            </div>
+
+
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div id="grid__bl">
+      <div id="grid__bl__btn">Projects</div>
+      <div id="grid__bl__content">
+        <div id="grid__bl__content__projects">
+
+          <div class="project p-1">
+            <img class="project__img project-1" src="assets/portfolio-projects/clinic.png" alt="Project 1" />
+            <h2 class="project__title">Clinic App</h2>
+            <button class="btn" onclick="window.location.href=''">
+              Demo
+            </button>
+            <button class="btn" onclick="window.location.href=''">
+              GitHub
+            </button>
+          </div>
+
+
+
+
+
+
+
+          <div class="project p-2">
+            <img class="project__img project-2" src="assets/portfolio-projects/bookshelf.png" alt="Project 2" />
+            <h2 class="project__title"></h2>
+            <h2 class="project__title">My Bookshelf</h2>
+            <button class="btn" onclick="window.location.href='https://personal-bookshelfs.netlify.app/'">
+              Demo
+            </button>
+            <button class="btn" onclick="window.location.href='https://github.com/BHAVISHEK1/MyBookshelf'">
+              GitHub
+            </button>
+          </div>
+
+
+
+
+          <div class="project p-3">
+            <img class="project__img project-3" src="assets/portfolio-projects/webdoodler2.png" alt="Project 3" />
+            <h2 class="project__title">Chrome extension</h2>
+
+            <button class="btn"
+              onclick="window.location.href='https://chromewebstore.google.com/detail/webpage-doodler/lbodekjfnafmhkbaegjapfimodhppepa'">
+              Demo
+            </button>
+            <button class="btn"
+              onclick="window.location.href='https://github.com/BHAVISHEK1/WebDoodler_ChromeExtension'">
+              GitHub
+            </button>
+          </div>
+
+
+
+          <div class="project p-3">
+            <img class="project__img project-3" src="assets/portfolio-projects/trackspend.png" alt="Project 3" />
+            <h2 class="project__title">Money Tracker</h2>
+
+            <button class="btn" onclick="window.location.href='https://track-as-u-spend.netlify.app/'">
+              Demo
+            </button>
+            <button class="btn" onclick="window.location.href='https://github.com/BHAVISHEK1/mini_projects'">
+              GitHub
+            </button>
+          </div>
+
+
+
+          <div class="project p-3">
+            <img class="project__img project-3" src="assets/portfolio-projects/sign.png" alt="Project 3" />
+            <h2 class="project__title">Sign Scraper</h2>
+
+            <button class="btn" onclick="window.location.href='https://signscraper.netlify.app/'">
+              Demo
+            </button>
+            <button class="btn" onclick="window.location.href='https://github.com/BHAVISHEK1/mini_projects'">
+              GitHub
+            </button>
+          </div>
+
+          <button class="arrow" onclick="navigateProject(-1)">
+            &#10094;
+          </button>
+          <button class="arrow" onclick="navigateProject(1)">&#10095;</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="grid__br">
+      <div id="grid__br__btn">Contact</div>
+      <div id="grid__br__content">
+        <h5 class="contact-text">Get In Touch</h5>
+        <h2 class="contact-text">Contact Me</h2>
+        <div>
+          <button style="border: 4px solid red;" class="btn btn-contact"
+            onclick="window.location.href='https://mailto:thecodingkite@gmail.com'">
+            Email
+          </button>
+          <button style="border: 4px solid rgb(65, 125, 237);" class="btn btn-contact"
+            onclick="window.location.href='https://www.linkedin.com/in/rohit-gupta-6333961b0/'">
+            LinkedIn
+          </button>
+          <button style="border: 4px solid rgb(18, 192, 119);" class="btn btn-contact"
+            onclick="window.location.href='https://wa.me/message/6VRRX2XZZ4UFO1'">
+            WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div id="color-mode" style="background-color: rgb(93, 93, 93);">
+    <div id="toggle-button" class="icon" style="background-color: white; border-radius: 50px;">
+
+    </div>
+  </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+
+</html>
