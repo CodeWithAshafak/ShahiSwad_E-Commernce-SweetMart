@@ -13,6 +13,18 @@ import "../CSS/Header.css"
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
+
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+
+
+// Model
+
+
+
+
+
 const Header = () => {
 
   const navigate = useNavigate()
@@ -20,8 +32,25 @@ const Header = () => {
     console.log(cart);
     const cartLenght = cart.length
 
+
+    
+ //  model
+ const [show, setShow] = useState(false);
+
+ const handleClose = () => setShow(false);
+ const handleShow = () => setShow(true);
+    
+
   return (
-    <Navbar bg="primary" variant="dark" expand="lg">
+
+   
+    <>
+
+    
+
+
+
+    <Navbar  variant="dark" expand="lg">
       <Container>
         <Navbar.Brand as={Link} to="/">Shahi <span>Swad</span></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -45,14 +74,52 @@ const Header = () => {
               <BsCartCheckFill size="25" />
               {cartLenght}
               </Nav.Link>
+
+
             <Nav.Link as={Link} to="/user">
-            <FaUserAlt size="20" />
+
+            <FaUserAlt size="20"  />
+
+
              </Nav.Link>
+
+             
+
+             <button  onClick={handleShow}>click me</button>
            </Nav>
 
         </Navbar.Collapse>
       </Container>
     </Navbar>
+
+
+
+
+
+    {/* model */}
+
+ 
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Registration page</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+
+          Enter name: <input type="text" />
+
+
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
   );
 }
 
