@@ -17,6 +17,11 @@ import { FaAngleRight } from "react-icons/fa";
 
 import "../CSS/Footer.css";
 const Footer = () => {
+
+
+
+
+  
   return (
     <>
       <Container fluid >
