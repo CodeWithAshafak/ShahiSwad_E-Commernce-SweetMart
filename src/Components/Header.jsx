@@ -69,12 +69,13 @@ const Header = () => {
 
 
 
-          <Nav className="nav-icons">          
-              <Nav.Link as={Link} to="/carts" >
-              <BsCartCheckFill size="25" />
-              {cartLenght}
-              </Nav.Link>
+          <Nav className="nav-icons"> 
 
+
+          <Nav.Link as={Link} to="/carts" className="cart-container">
+          <BsCartCheckFill className="cart-icon" />
+           {cartLenght > 0 && <span className="cart-count">{cartLenght}</span>}
+          </Nav.Link>
 
             <Nav.Link as={Link} to="/user">
 

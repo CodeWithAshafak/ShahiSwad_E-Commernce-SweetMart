@@ -71,3 +71,43 @@
   transform: scale(1.1);
   color: #FFD700 !important;
 } 
+
+
+/* Cart Icon Container */
+.cart-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Cart Icon */
+.cart-icon {
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.cart-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Cart Count Badge */
+.cart-count {
+  position: absolute;
+  top: -8px; /* Adjust position */
+  right: -10px; /* Adjust position */
+  background:rgb(187, 170, 170);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 7px;
+  border-radius: 50%;
+  min-width: 18px;
+  text-align: center;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Hide cart count when empty */
+.cart-count:empty {
+  display: none;
+}

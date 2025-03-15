@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector , useDispatch } from 'react-redux'
 import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
+
 
 
 import { FaPlusSquare } from "react-icons/fa";
@@ -15,6 +15,10 @@ import { qntyInc , qntyDec ,proDelete} from '../AddToCardSlice';
 import "../CSS/Card.css"
 import { useNavigate } from 'react-router-dom';
 
+
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import emptyCart from "../Images/empty-cart.gif"
 
 
 const Carts = () => {
@@ -55,20 +59,45 @@ const Carts = () => {
       </>
     )
   })
+
+if(Cart.length=== 0 ){
+  return(
+  
+  
+   <div className="emptyCart">
+
+      
+
+    <img src={emptyCart} />
+    <h5> Your Cart is Empty </h5>
+
+   </div>
+  
+
+
+)
+}
+
   return (
     <>
 
+
+
+    <Container fluid className='cartWrapper'>
+
+
+      <div className="heading">
+
+         <h2>Your Cart </h2>
+
+      </div>
     
-    <Container fluid>
-    <div className="headingCointainer">
+    <main>
+    <div className="table-responsive">
 
-    <h1 textAlign="center" >Your Cart is Ready </h1>
-   <h4> Your Total Bill is :  <FaIndianRupeeSign /> {totalAmount}</h4> 
-   <Button variant="outline-dark" onClick={()=>{navigate("/checkout")}} >Checkout</Button>
+       
 
-    </div>
-  
-<hr />
+
     <Table striped bordered hover style={{textAlign:"center"}}>
       <thead>
         <tr>
@@ -83,10 +112,48 @@ const Carts = () => {
       </thead>
       <tbody>
         {result}
-      </tbody>
+      </tbody>  
     </Table>
 
 
+    </div>
+ 
+    <div className="cartSummery">
+
+     <h3>Cart Summery </h3>
+   <h6> Your Total Bill is :  <FaIndianRupeeSign /> {totalAmount}</h6> 
+
+   <Form>
+
+
+
+      <Form.Group className="mb-3" 
+      controlId="name">
+
+
+        <Form.Label>Enter Name</Form.Label>
+
+
+        <Form.Control type="email" placeholder="Ex. Rahul Mishra" />
+       
+
+
+
+      </Form.Group>
+
+      
+
+
+
+    </Form>
+
+
+
+   <Button variant="outline-dark" onClick={()=>{navigate("/checkout")}} >Checkout</Button>
+
+    </div>
+
+    </main>
 
 
     </Container>
