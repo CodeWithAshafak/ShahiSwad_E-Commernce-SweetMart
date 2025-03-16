@@ -25,13 +25,30 @@ const Carts = () => {
 
     
   }
-  const handleSubmit = ()=>{
-    const api = `${BASE_URL}/payment`
-    const response = axios.post(api,{
-      user:input,
-      products:Cart
-    })
+  const handleSubmit =  async()=>{
+    
+     
+    try {
 
+      if (!input.name || !input.email || !input.address || !input.pin) {
+        alert("Please fill in all required fields before checkout.");
+        return;
+      }
+      
+
+      const api = `${BASE_URL}/user/payment`
+      const response = await axios.post(api,{
+         user:input,
+         products:Cart
+      })
+    console.log(response.data);
+      
+    } catch (error) {
+      
+    }
+
+
+    
   }
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -142,10 +159,10 @@ const Carts = () => {
 
             <Button
               variant="outline-dark"
-              onClick={() => {
-                navigate("/checkout");
-              }}
+              onClick={() => { handleSubmit() }}
             >
+
+
               Checkout
             </Button>
           </div>
